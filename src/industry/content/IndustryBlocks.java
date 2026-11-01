@@ -17,7 +17,6 @@ import mindustry.world.blocks.production.Drill;
 import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.blocks.production.Separator;
 import mindustry.world.blocks.storage.StorageBlock;
-import mindustry.world.draw.DrawBlurSpin;
 import mindustry.world.draw.DrawDefault;
 import mindustry.world.draw.DrawGlowRegion;
 import mindustry.world.draw.DrawMulti;
@@ -110,9 +109,9 @@ public class IndustryBlocks {
             hasItems = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 6f),
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 6f; }},
                 new DrawRegion("-top"),
-                new DrawGlowRegion("-glow") {{
+                new DrawGlowRegion() {{
                     color = Color.valueOf("ff8c1e");
                 }}
             );
@@ -131,8 +130,8 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 10f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 10f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("ff7814");
                 }}
             );
@@ -150,7 +149,7 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawGlowRegion("-glow") {{
+                new DrawGlowRegion() {{
                     color = Color.valueOf("ff640a");
                 }}
             );
@@ -168,8 +167,8 @@ public class IndustryBlocks {
             hasItems = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 4f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 4f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("ff8c1e");
                 }}
             );
@@ -190,8 +189,8 @@ public class IndustryBlocks {
             hasItems = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 5f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 5f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("ff8214");
                 }}
             );
@@ -217,8 +216,8 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 8f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 8f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("b4ff50");
                 }}
             );
@@ -236,8 +235,8 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 6f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 6f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("78dc64");
                 }}
             );
@@ -256,8 +255,8 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 5f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 5f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("a0e664");
                 }}
             );
@@ -277,7 +276,7 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawGlowRegion("-glow") {{
+                new DrawGlowRegion() {{
                     color = Color.valueOf("8cd2ff");
                 }}
             );
@@ -301,8 +300,8 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 4f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 4f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("ffaa32");
                 }}
             );
@@ -324,8 +323,8 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 5f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 5f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("ff9628");
                 }}
             );
@@ -344,8 +343,8 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 8f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 8f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("f0c846");
                 }}
             );
@@ -364,8 +363,8 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 7f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 7f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("5096c8");
                 }}
             );
@@ -386,8 +385,8 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 4f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 4f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("c86432");
                 }}
             );
@@ -408,8 +407,8 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 5f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 5f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("3cc8ff");
                 }}
             );
@@ -448,7 +447,7 @@ public class IndustryBlocks {
             hasItems = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawGlowRegion("-glow") {{
+                new DrawGlowRegion() {{
                     color = Color.valueOf("ffc832");
                 }}
             );
@@ -467,7 +466,7 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawGlowRegion("-glow") {{
+                new DrawGlowRegion() {{
                     color = Color.valueOf("f0a01e");
                 }}
             );
@@ -491,8 +490,8 @@ public class IndustryBlocks {
             hasLiquids = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 6f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 6f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("c89632");
                 }}
             );
@@ -544,8 +543,8 @@ public class IndustryBlocks {
             hasItems = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawBlurSpin("-rotator", 3f),
-                new DrawGlowRegion("-glow") {{
+                new DrawRegion("-rotator") {{ spinSprite = true; rotateSpeed = 3f; }},
+                new DrawGlowRegion() {{
                     color = Color.valueOf("50c8ff");
                 }}
             );
@@ -567,7 +566,7 @@ public class IndustryBlocks {
             hasItems = true;
             drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawGlowRegion("-glow") {{
+                new DrawGlowRegion() {{
                     color = Color.valueOf("50c8ff");
                 }}
             );
