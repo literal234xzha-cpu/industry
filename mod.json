@@ -5,6 +5,6 @@
   "main": "industry.industryMod",
   "description": "Cadenas de producción industriales reales: metalurgia, química, minería, robótica y petroquímica.",
   "version": "1.0.0",
-  "minGameVersion": "145",
+  "minGameVersion": "160.7",
   "java": true
 }
