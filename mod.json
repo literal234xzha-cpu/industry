@@ -2,9 +2,9 @@
   "displayName": "Industry",
   "name": "industry",
   "author": "LOLOCORD",
-  "main": "industry.industryMod",
+  "main": "industry.IndustryMod",
   "description": "Cadenas de producción industriales reales: metalurgia, química, minería, robótica y petroquímica.",
   "version": "1.0.0",
-  "minGameVersion": "160.7",
+  "minGameVersion": "145",
   "java": true
 }
