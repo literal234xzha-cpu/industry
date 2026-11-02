@@ -294,7 +294,7 @@ public class IndustryBlocks {
             requirements(Category.production, ItemStack.with(Items.copper, 150, Items.lead, 120, Items.graphite, 90, Items.silicon, 60));
             size = 3;
             craftTime = 140f;
-            outputLiquid = new LiquidStack(crudeOil, 10f);
+            outputLiquid = new LiquidStack(Liquids.oil, 10f);
             consumePower(3.2f);
             health = 650;
             hasLiquids = true;
@@ -308,7 +308,7 @@ public class IndustryBlocks {
         }};
 
         // FractionalTower — 4x4 — Torre de destilación fraccionada de crudo
-        // Crudo entra → Asfalto sale en item, Diésel y Nafta en líquidos
+        // Petróleo entra → Asfalto sale en item, Nafta en líquido
         fractionalTower = new GenericCrafter("fractional-tower") {{
             category = Category.crafting;
             requirements(Category.crafting, ItemStack.with(Items.titanium, 220, Items.metaglass, 140, Items.silicon, 130, Items.plastanium, 80));
@@ -316,7 +316,7 @@ public class IndustryBlocks {
             craftTime = 210f;
             outputItem = new ItemStack(asphalt, 2);
             outputLiquid = new LiquidStack(naphtha, 6f);
-            consumeLiquid(crudeOil, 8f);
+            consumeLiquid(Liquids.oil, 8f);
             consumePower(5.5f);
             health = 1100;
             hasItems = true;
@@ -350,14 +350,14 @@ public class IndustryBlocks {
             );
         }};
 
-        // LubricantSynthesizer — 2x2 — Nafta + parafina = lubricante sintético
+        // LubricantSynthesizer — 2x2 — Petróleo = lubricante sintético
         lubricantSynthesizer = new GenericCrafter("lubricant-synthesizer") {{
             category = Category.crafting;
             requirements(Category.crafting, ItemStack.with(Items.copper, 90, Items.lead, 70, Items.silicon, 45));
             size = 2;
             craftTime = 130f;
             outputLiquid = new LiquidStack(lubricant, 4f);
-            consumeLiquid(crudeOil, 4f);
+            consumeLiquid(Liquids.oil, 4f);
             consumePower(1.8f);
             health = 310;
             hasLiquids = true;
@@ -429,7 +429,11 @@ public class IndustryBlocks {
             health = 600;
             rotateSpeed = 5f;
             drawSpinSprite = true;
+            hasLiquids = true;
+            liquidCapacity = 20f;
             consumePower(4f);
+            // Agua como refrigerante opcional: acelera 1.6x la velocidad de minería
+            consumeLiquid(Liquids.water, 0.08f).boost();
         }};
 
         explosiveCharger = new GenericCrafter("explosive-charger") {{
